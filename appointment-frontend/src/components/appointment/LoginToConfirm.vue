@@ -4,17 +4,17 @@
       <v-row class="align-row-1 bcsc-btn" v-if="!hideBCServicesCard">
         <v-col class="fill-width">
           <v-btn
-            width="220"
+            min-width="150"
             large
             color="primary"
             @click="login(idpHint.BCSC)"
           >
-            Mobile BC Services Card App
+            BC Services Card
           </v-btn>
-          <a class="link-w-icon mt-6" href="https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card/log-in-with-card"
+          <a class="link-w-icon mt-6" href="https://www2.gov.bc.ca/gov/content/governments/government-id/bc-services-card"
             target="_blank" rel="noopener noreferrer">
             <v-icon small class="mr-2">mdi-open-in-new</v-icon>
-            <span>About the mobile BC Services Card app</span>
+            <span>About the BC Services Card</span>
           </a>
         </v-col>
         <v-col class="align-row-2 fill-width">
@@ -29,12 +29,12 @@
       <v-row class="align-row-1 bcsc-btn">
         <v-col class="fill-width">
           <v-btn
-          width="220"
+          min-width="150"
           large
           color="primary"
           @click="login(idpHint.BCEID)"
         >
-        Basic BCeID Username
+          BCeID
         </v-btn>
         <a class="link-w-icon mt-6" href="https://www.bceid.ca/"
           target="_blank" rel="noopener noreferrer">
@@ -57,11 +57,11 @@
       <v-row class="align-row-1 bcsc-btn">
         <v-col class="fill-width">
           <v-btn :href="BCEIDRegistrationURL"
-          width="220"
+          min-width="150"
           large
           color="primary"
         >
-        Create Basic BCeID Username
+        Create BCeID
         </v-btn>
         <!--a class="link-w-icon mt-3" :href="BCEIDRegistrationURL"
           target="_self" rel="noopener noreferrer">

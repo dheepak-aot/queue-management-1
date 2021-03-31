@@ -24,7 +24,6 @@
       <div class="add_citizen_template">
         <div class="add_citizen_padding" style="background: rgb(240, 240, 240);padding-top: 12px;">
           <Comments v-if="!simplifiedModal" />
-          <NotificationFields />
           <Channel />
           <div style="transform: translateY(18px);">
             <Filters />
@@ -50,7 +49,6 @@ import { Getter, State } from 'vuex-class'
 import Channel from './form-components/channel.vue'
 import Comments from './form-components/comments.vue'
 import Filters from './form-components/filters.vue'
-import NotificationFields from './form-components/notification_fields.vue'
 import Tables from './form-components/tables.vue'
 
 @Component({
@@ -58,8 +56,7 @@ import Tables from './form-components/tables.vue'
     Comments,
     Channel,
     Filters,
-    Tables,
-    NotificationFields
+    Tables
   }
 })
 export default class AddCitizenForm extends Vue {
