@@ -100,10 +100,7 @@ export const commonMutation: any = {
       priority: citizen.priority,
       citizen: citizen,
       channel: active_service.channel_id,
-      service: active_service.service_id,
-      notification_phone: citizen.notification_phone,
-      notification_email: citizen.notification_email,
-      walkin_unique_id: citizen.walkin_unique_id
+      service: active_service.service_id
     }
     const keys = Object.keys(formData)
     keys.forEach(key => {

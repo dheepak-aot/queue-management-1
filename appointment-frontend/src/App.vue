@@ -2,10 +2,9 @@
   <v-app id="app">
     <div class="app-body" :class="{'app-mobile': $vuetify.breakpoint.xs}">
       <app-header :key="$store.state.refreshKey"></app-header>
-      <feedback v-if="(isFeedbackEnabled && (!isWalkin))"></feedback>
+      <feedback v-if="isFeedbackEnabled"></feedback>
       <main class="main-block container">
         <v-btn
-          v-if="(!isWalkin)"
           color="secondary"
           fixed
           bottom
@@ -64,7 +63,6 @@ export default class App extends Vue {
   private tokenService = new TokenService()
   private isScrolled = false
   private isFeedbackEnabled: boolean = ConfigHelper.isFeedbackEnabled()
-  private isWalkin:boolean = false
 
   private async beforeMount () {
     await KeyCloakService.setKeycloakConfigUrl(`${process.env.VUE_APP_PATH}config/kc/keycloak-public.json`)
@@ -79,7 +77,6 @@ export default class App extends Vue {
       await this.initSetup()
       callback()
     })
-    this.isWalkin = window.location.href.includes('walk-in-Q')
   }
 
   private getAccountFromSession (): User {

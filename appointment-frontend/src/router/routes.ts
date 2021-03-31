@@ -5,7 +5,6 @@ import LoginSelectorView from '@/views/LoginSelectorView.vue'
 import NoContentView from '@/views/NoContentView.vue'
 import SigninView from '@/views/SigninView.vue'
 import SignoutView from '@/views/SignoutView.vue'
-import WalkinQ from '@/views/WalkinQ.vue'
 
 export const routes = [
   {
@@ -68,12 +67,5 @@ export const routes = [
     // default/fallback route
     path: '*',
     redirect: '/appointment'
-  },
-  {
-    path: '/walk-in-Q/:uniqueId',
-    name: 'walk-in-Q',
-    component: WalkinQ,
-    props: true,
-    meta: { requiresAuth: false, skipNoContent: true }
   }
 ]
