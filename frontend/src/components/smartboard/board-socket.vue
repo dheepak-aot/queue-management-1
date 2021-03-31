@@ -72,17 +72,12 @@ export default class BoardSocket extends Vue {
       'citizen_invited',
       () => { this.onUpdateBoard() }
     )
-    socket.on(
-      'digital_signage_msg_update',
-      () => { this.onDigitalSignageMsgUpdate() }
-    )
   }
 
   // LISTENER METHODS
   onConnect () {
     console.log('boardSocket connected')
-    // console.log('==> In board-socket.vue, onConnect, socket.io.engine.id is: ' + socket.io.engine.id.toString())
-    console.log('==> In board-socket.vue, onConnect, socket.io.engine.id is: ' + socket.io.engine.id)
+    console.log('==> In board-socket.vue, onConnect, socket.io.engine.id is: ' + socket.io.engine.id.toString())
     clearInterval(this.reconnectInterval)
     this.join()
   }
@@ -110,11 +105,6 @@ export default class BoardSocket extends Vue {
   onUpdateBoard () {
     this.$root.$emit('addToBoard')
     console.log('socket received: "onUpdateBoard"')
-  }
-
-  onDigitalSignageMsgUpdate () {
-    this.$root.$emit('onDigitalSignageMsgUpdate')
-    console.log('socket received: "onDigitalSignageMsgUpdate"')
   }
 
   created () {

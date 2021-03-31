@@ -19,8 +19,6 @@ import Exams from '../components/exams/exams.vue'
 import Smartboard from '@/components/smartboard/index.vue'
 
 import Upload from '@/components/upload/upload.vue'
-import Tasklist from '@/views/TaskList.vue'
-import ButtonTasklist from '@/components/TaskList/ButtonTasklist.vue'
 
 export const routes = [
   {
@@ -81,14 +79,6 @@ export const routes = [
         components: {
           default: Upload,
           buttons: ButtonsUpload
-        },
-        meta: { hideCitizenWaiting: false }
-      },
-      {
-        path: 'service-flow',
-        components: {
-          default: Tasklist,
-          buttons: ButtonTasklist
         },
         meta: { hideCitizenWaiting: false }
       }
